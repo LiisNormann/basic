@@ -17,7 +17,7 @@ public class Ex18 {
         things.add(new Item("circular saw", 8));
         things.add(new Item("passport", 2));
 
-        // we create a packer which uses boxes whose valume is 10
+        // we create a packer which uses boxes whose volume is 10
         Packer packer = new Packer(10);
 
         // we ask our packer to pack things into boxes
