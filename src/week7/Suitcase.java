@@ -7,7 +7,7 @@ public class Suitcase {
 
     public Suitcase(int weightLimit) {
         this.weightLimit = weightLimit;
-        this.things = new ArrayList<Thing>();
+        this.things = new ArrayList<>();
     }
 
     public void addThing(Thing thing){
@@ -28,7 +28,7 @@ public class Suitcase {
             weightCurrent += currentThing.getWeight();
         }
 
-        String langControl = "";
+        String langControl;
 
         if (this.things.size() == 0) {
             langControl = "empty";
@@ -39,5 +39,19 @@ public class Suitcase {
         }
 
         return this.things.size() + " " + langControl + " (" + weightCurrent + " kg)";
+    }
+
+    public void printThings(){
+        for (Thing thing :this.things) {
+            System.out.println(thing);
+        }
+    }
+
+    public int totalWeight(){
+        int weightCurrent = 0;
+        for (Thing currentThing :this.things) {
+            weightCurrent += currentThing.getWeight();
+        }
+        return weightCurrent;
     }
 }
