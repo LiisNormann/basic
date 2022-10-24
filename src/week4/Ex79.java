@@ -3,21 +3,32 @@ import java.util.Scanner;
 
 public class Ex79 {
     public static void main(String[] args) {
-        NumberStatistics stats = new NumberStatistics();
+        NumberStatistics all = new NumberStatistics();
+        NumberStatistics even = new NumberStatistics();
+        NumberStatistics odd = new NumberStatistics();
+
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Type number: ");
         int number;
+
         while (true) {
             number = Integer.parseInt(reader.nextLine());
+
             if (number == -1) {
                 break;
             }
-            stats.addNumber(number);
+            all.addNumber(number);
+
+            if(number % 2 == 0){
+                even.addNumber(number);
+            } else {
+                odd.addNumber(number);
+            }
         }
 
-        System.out.println("Amount: " + stats.amountOfNumbers());
-        System.out.println("Sum: " + stats.sum());
-        System.out.println("Average: " + stats.average());
+        System.out.println("sum: " + all.sum());
+        System.out.println("sum of even: " + even.sum());
+        System.out.println("sum of odd: " + odd.sum());
     }
 }
