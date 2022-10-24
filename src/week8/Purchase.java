@@ -10,9 +10,11 @@ public class Purchase {
         this.amount = amount;
         this.unitPrice = unitPrice;
     }
+
     public int price() {
-        return this.unitPrice * this.amount;
+        return this.amount;
     }
+
     public void increaseAmount(){
         this.amount++;
     }

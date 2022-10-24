@@ -1,4 +1,5 @@
 package week8;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,11 +13,18 @@ public class ShoppingBasket {
     public void add(String product, int price){
         this.purchases.add(new Purchase(product, 1, price));
     }
+
     public int price(){
         int price = 0;
-        for (Purchase purchase:this.purchases) {
+        for (Purchase purchase: this.purchases) {
             price += purchase.price();
         }
         return price;
+    }
+
+    public void print(){
+        for (Purchase purchase: this.purchases) {
+            System.out.println(purchase);
+        }
     }
 }
