@@ -16,4 +16,8 @@ public class Dictionary {
         }
         return null;
     }
+
+    public int amountOfWords(){
+        return this.dictionary.size();
+    }
 }
